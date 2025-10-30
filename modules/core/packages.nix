@@ -74,11 +74,11 @@
     unzip # Tool For Handling .zip Files
     usbutils # Good Tools For USB Devices
     uwsm # Universal Wayland Session Manager (optional must be enabled)
-    v4l-utils # Used For Things Like OBS Virtual Camera
     waypaper  # wallpaper changer
     warp-terminal # Terminal with AI support build in
     wget # Tool For Fetching Files With Links
     ytmdl # Tool For Downloading Audio From YouTube
     gcc # C compiler for neovim
+    fd # find improved
   ];
 }
