@@ -72,26 +72,8 @@
   # Default background
   # Add new images to ~/zaneyos/wallpapers
   stylixImage = ../../wallpapers/mountainscapedark.jpg;
-  #stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
-  #stylixImage = ../../wallpapers/Anime-Purple-eyes.png;
-  #stylixImage = ../../wallpapers/Rainnight.jpg;
-  #stylixImage = ../../wallpapers/zaney-wallpaper.jpg;
-  #stylixImage = ../../wallpapers/nix-wallpapers-strips-logo.jpg;
-  #stylixImage = ../../wallpapers/beautifulmountainscape.jpg;
 
-  # Set Waybar
-  #  Available Options:
   waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-ddubs.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-ddubs-2.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-simple.nix;
-  # Throwback to ZaneyOS v1.0
-  #waybarChoice = ../../modules/home/waybar/waybar-jerry.nix;
-  # Very colorful and bright colors
-  #waybarChoice = ../../modules/home/waybar/waybar-nekodyke.nix;
-  # DWM styled waybars from Matt at TheLinuxCast
-  #waybarChoice = ../../modules/home/waybar/waybar-dwm.nix;
-  #waybarChoice = ../../modules/home/waybar/waybar-dwm-2.nix;
 
   # Set Animation style
   # Available options are:
