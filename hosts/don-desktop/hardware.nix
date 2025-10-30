@@ -24,7 +24,24 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  swapDevices = [ ];
+  fileSystems."/mnt/Windows" =
+    { device = "/dev/disk/by-uuid/822C0A4D2C0A3CA3";
+      fsType = "ntfs-3g";
+      options = [
+        "rw"                 # Read/Write access
+        "defaults"
+        "nofail"             # Prevents boot failure if the drive isn't present
+        "uid=1000"           # Set the owner UID (replace 1000 with your user's UID)
+        "gid=100"            # Set the owner GID (usually 'users' group)
+        "dmask=022"          # Directory permissions mask
+        "fmask=133"          # File permissions mask
+      ];
+    };
+
+  swapDevices = [{
+    device = "/swapfile";
+    size = 16 * 1024; # 16GB
+  }];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
