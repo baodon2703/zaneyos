@@ -28,7 +28,8 @@ in
     ./git.nix
     ./gtk.nix
     ./htop.nix
-    ./hyprland
+    # ./hyprland
+    ./niri
     ./kitty.nix
     ./lazygit.nix
     # ./obs-studio.nix
