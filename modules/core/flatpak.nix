@@ -1,30 +1,8 @@
 { pkgs, ... }: {
   xdg.portal = {
     enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-gnome
-    ];
-    config = {
-      common = {
-        default = [
-          "gnome"
-          "gtk"
-        ];
-      };
-      niri = {
-        default = [
-          "gnome"
-          "gtk"
-        ];
-        "org.freedesktop.impl.portal.ScreenCast" = "gnome";
-        "org.freedesktop.impl.portal.Screenshot" = "gnome";
-      };
-    };
-    configPackages = [
-      pkgs.hyprland
-      pkgs.niri
-    ];
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    configPackages = [ pkgs.hyprland ];
   };
   services = {
     flatpak = {

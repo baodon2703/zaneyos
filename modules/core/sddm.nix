@@ -67,10 +67,10 @@ in {
       theme = "sddm-astronaut-theme";
     };
 
-    # autoLogin = {
-    #   enable = true;
-    #   user = "don";
-    # };
+    autoLogin = {
+      enable = true;
+      user = "don";
+    };
   };
 
   environment.systemPackages = [sddm-astronaut];
