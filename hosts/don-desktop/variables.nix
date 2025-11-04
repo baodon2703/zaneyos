@@ -27,7 +27,7 @@
   # You can configure multiple monitors.
   # Inside the quotes, create a new line for each monitor.
   extraMonitorSettings = "
-
+    monitor=HDMI-A-1,preferred,auto,2
     ";
 
   # Waybar Settings
