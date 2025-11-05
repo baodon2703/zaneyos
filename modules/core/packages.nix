@@ -14,6 +14,7 @@
       enable = true; # set this so desktop file is created
       withUWSM = false;
     };
+    niri.enable = true;
     dconf.enable = true;
     seahorse.enable = true;
     fuse.userAllowOther = true;
@@ -80,5 +81,8 @@
     ytmdl # Tool For Downloading Audio From YouTube
     gcc # C compiler for neovim
     fd # find improved
+    cachix # Binary cache hosting
+    home-manager
+    xwayland-satellite
   ];
 }
