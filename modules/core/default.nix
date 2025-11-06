@@ -26,6 +26,7 @@ in
     ./stylix.nix
     ./syncthing.nix
     ./sunshine.nix
+    ./couchdb.nix
     ./system.nix
     ./thunar.nix
     ./user.nix

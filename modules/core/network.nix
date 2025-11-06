@@ -29,6 +29,7 @@ in
         59010
         59011
         8080
+        5984 # couchdb
       ];
       allowedUDPPorts = [
         59010
