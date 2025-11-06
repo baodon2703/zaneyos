@@ -24,15 +24,16 @@ in
     ./services.nix
     ./steam.nix
     ./stylix.nix
-    ./syncthing.nix
-    ./sunshine.nix
-    ./couchdb.nix
-    ./audiobookshelf.nix
     ./system.nix
     ./thunar.nix
     ./user.nix
     ./virtualisation.nix
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
+    ./syncthing.nix
+    ./sunshine.nix
+    ./couchdb.nix
+    ./audiobookshelf.nix
+    #./immich.nix
   ];
 }
