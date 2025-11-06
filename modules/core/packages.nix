@@ -82,7 +82,7 @@
     gcc # C compiler for neovim
     fd # find improved
     cachix # Binary cache hosting
-    home-manager
     xwayland-satellite
+    obsidian
   ];
 }

@@ -10,15 +10,6 @@
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix/release-25.05";
     nix-flatpak.url = "github:gmodena/nix-flatpak?ref=latest";
-
-    # Hypersysinfo  (Optional)
-    #hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
-
-    # QuickShell (optional add quickshell to outputs to enable)
-    #quickshell = {
-    #  url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
   };
 
   outputs =

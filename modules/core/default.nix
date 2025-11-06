@@ -16,7 +16,6 @@ in
     ./network.nix
     ./nfs.nix
     ./nh.nix
-    #./quickshell.nix  #Disabled for now not using it yet
     ./packages.nix
     ./printing.nix
     # Conditionally import the display manager module
@@ -26,6 +25,7 @@ in
     ./steam.nix
     ./stylix.nix
     ./syncthing.nix
+    ./sunshine.nix
     ./system.nix
     ./thunar.nix
     ./user.nix
