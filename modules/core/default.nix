@@ -27,6 +27,7 @@ in
     ./syncthing.nix
     ./sunshine.nix
     ./couchdb.nix
+    ./audiobookshelf.nix
     ./system.nix
     ./thunar.nix
     ./user.nix
