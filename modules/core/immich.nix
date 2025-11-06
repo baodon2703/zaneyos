@@ -1,13 +1,9 @@
-{ pkgs, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
   services.immich = {
     enable = true;
-    port = 2283;
+    port = 2284;
     host = "0.0.0.0";
-    mediaLocation = "/home/don/Documents/Photos-Immich";
     openFirewall = true;
+    #package = pkgs-unstable.immich;
   };
-
-  # This adds the system-managed 'immich' user to the 'don' group
-  # to grant it access to the mediaLocation in /home/don.
-  users.users.immich.extraGroups = [ "don" ];
 }

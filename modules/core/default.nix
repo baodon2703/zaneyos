@@ -34,6 +34,6 @@ in
     ./sunshine.nix
     ./couchdb.nix
     ./audiobookshelf.nix
-    #./immich.nix
+    ./immich.nix
   ];
 }

@@ -7,6 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix/release-25.05";
     nix-flatpak.url = "github:gmodena/nix-flatpak?ref=latest";
@@ -15,6 +16,7 @@
   outputs =
     {
       nixpkgs,
+      nixpkgs-unstable,
       home-manager,
       nix-flatpak,
       ...
@@ -24,6 +26,7 @@
       host = "don-desktop";
       profile = "nvidia";
       username = "don";
+      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
 
       # Deduplicate nixosConfigurations while preserving the top-level 'profile'
       mkNixosConfig = gpuProfile: nixpkgs.lib.nixosSystem {
@@ -33,6 +36,7 @@
           inherit username;
           inherit host;
           inherit profile; # keep using the let-bound profile for modules/scripts
+          inherit pkgs-unstable;
         };
         modules = [
           ./profiles/${gpuProfile}
