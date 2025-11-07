@@ -30,6 +30,7 @@ in
     ./virtualisation.nix
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
+    ./overlays.nix
     ./syncthing.nix
     ./sunshine.nix
     ./couchdb.nix

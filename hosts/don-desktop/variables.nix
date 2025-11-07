@@ -16,7 +16,7 @@
   ghosttyEnable = true;
   vscodeEnable = false;
   # Note: This is evil-helix with VIM keybindings by default
-  helixEnable = true;
+  helixEnable = false;
   #To install: Enable here, zcli rebuild, then run zcli doom install
   doomEmacsEnable = false;
 
