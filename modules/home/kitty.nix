@@ -23,8 +23,9 @@
     extraConfig = ''
 
       # Clipboard
-      map ctrl+shift+v        paste_from_selection
-      map shift+insert        paste_from_selection
+      map ctrl+v        paste_from_selection
+      map ctrl+shift+c copy_or_interrupt
+      map ctrl+c copy_to_clipboard
 
       # Scrolling
       map ctrl+shift+up        scroll_line_up

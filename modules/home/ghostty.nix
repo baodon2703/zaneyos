@@ -35,8 +35,8 @@ in
 
     # keybindings
     # Copy/Paste
-    keybind = ctrl+shift+c=copy_to_clipboard
-    keybind = ctrl+shift+v=paste_from_clipboard
+    keybind = performable:ctrl+c=copy_to_clipboard
+    keybind = ctrl+v=paste_from_clipboard
 
     keybind = alt+s>r=reload_config
     keybind = alt+s>x=close_surface

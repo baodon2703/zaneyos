@@ -11,15 +11,7 @@ input {
   
   touchpad {
     tap
-    // dwt
-    // dwtp
-    // drag false
-    // drag-lock
-    natural-scroll
-    // accel-speed 0.2
-    // accel-profile "flat"
-    // scroll-method "two-finger"
-    // disabled-on-external-mouse
+    //natural-scroll
   }
 
   mouse {
@@ -129,7 +121,7 @@ layout {
 
     // You can change how the focus ring looks.
     focus-ring {
-        off
+        //off
         width 2
         active-color "#7fc8ff"
         inactive-color "#505050"
@@ -144,14 +136,8 @@ layout {
     shadow {
         on
         softness 30
-
-        // Spread expands the shadow.
         spread 5
-
-        // Offset moves the shadow relative to the window.
         offset x=0 y=5
-
-        // You can also change the shadow color and opacity.
         color "#0007"
     }
     background-color "transparent"
@@ -206,7 +192,6 @@ animations {
 }
 
 window-rule {
-  opacity 0.85
   geometry-corner-radius 4
   clip-to-geometry true
 }
@@ -222,56 +207,26 @@ window-rule {
     tiled-state true
 }
 
-workspace "1"
-workspace "brow"
-workspace "term"
+workspace "browser"
+workspace "2"
+workspace "3"
 workspace "4"
 workspace "5"
 workspace "6"
-workspace "7"
-workspace "obs"
-workspace "oss"
-
-
+workspace "steam"
 
 window-rule {
     match app-id=r#"steam"#
-    open-on-workspace "oss"
+    open-on-workspace "steam"
 }
 window-rule {
-    match app-id=r#"^discord$"#
-    open-on-workspace "oss"
+    match app-id=r#"kitty|emacs"#
+    opacity 0.85
 }
 window-rule {
-    match app-id=r#"chromium"#
-    open-maximized true
-    open-on-workspace "brow"
+    match app-id=r#"firefox"#
+    open-on-workspace "browser"
 }
-window-rule {
-    match app-id=r#"ghostty"#
-    open-maximized true
-    open-on-workspace "term"
-}
-
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
-}
-
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-window-rule {
-    geometry-corner-radius 6
-    clip-to-geometry true
-}
-
 
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
@@ -279,20 +234,19 @@ window-rule {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "waybar"
+
 spawn-at-startup "noctalia-shell"
-spawn-at-startup "bitwarden"
-spawn-sh-at-startup "waypaper --random"
-// spawn-at-startup "obs"
-// spawn-at-startup "steam"
-// spawn-at-startup "obsidian"
-// spawn-at-startup "ghostty"
+spawn-at-startup "emacs"
+spawn-at-startup "firefox"
+spawn-at-startup "ghostty"
 
 // 1. Initialize the swww daemon
 // We use 'sh' to run the command, and '&' to run it in the background
 // so it doesn't block niri from starting.
-spawn-sh-at-startup "swww-daemon &"
+//spawn-sh-at-startup "swww-daemon &"
 // 2. Set the initial wallpaper.
-spawn-sh-at-startup "swww img ~/Pictures/Wallpapers/mountainscapedark.jpg"
+//spawn-sh-at-startup "swww img ~/Pictures/Wallpapers/mountainscapedark.jpg"
 
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
@@ -315,7 +269,8 @@ binds {
     Mod+B hotkey-overlay-title="Open a Browser " { spawn "firefox"; }
     Mod+E hotkey-overlay-title="Open a FileManager " { spawn "thunar"; }
     Mod+O hotkey-overlay-title="Open a Obsidian " { spawn "obsidian"; }
-    Mod+Space hotkey-overlay-title="Open launcher " { spawn "rofi-launcher"; }
+    Mod+Space hotkey-overlay-title="Open launcher " { spawn-sh "noctalia-shell ipc call launcher toggle"; }
+    //Mod+Space hotkey-overlay-title="Open launcher " { spawn "rofi-launcher"; }
     // Mod+D hotkey-overlay-title="Run an Application" { spawn-sh "wofi --show drun"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
