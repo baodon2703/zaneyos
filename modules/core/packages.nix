@@ -82,9 +82,10 @@
     gcc # C compiler for neovim
     fd # find improved
     cachix # Binary cache hosting
-    xwayland-satellite
+    # xwayland-satellite # For Niri
     obsidian
-    immich-go # Tool for bulk-upload
+    # immich-go # Tool for bulk-upload
     libation # liberate audible
+    emacs
   ];
 }

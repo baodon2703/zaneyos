@@ -31,6 +31,7 @@ in
     ./hyprland
     ./kitty.nix
     ./lazygit.nix
+    ./niri
     # ./obs-studio.nix
     #./nvf.nix
     ./rofi
