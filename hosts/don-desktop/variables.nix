@@ -12,11 +12,7 @@
   # Emable/disable bundled applications
   tmuxEnable = false;
   alacrittyEnable = false;
-  weztermEnable = false;
   ghosttyEnable = true;
-  vscodeEnable = false;
-  # Note: This is evil-helix with VIM keybindings by default
-  helixEnable = false;
   #To install: Enable here, zcli rebuild, then run zcli doom install
   doomEmacsEnable = false;
 
@@ -40,10 +36,6 @@
   # or as a flatpak
   browser = "firefox";
 
-  # Available Options:
-  # Kitty, ghostty, wezterm, aalacrity
-  # Note: kitty, wezterm, alacritty have to be enabled in `variables.nix`
-  # Setting it here does not enable it. Kitty is installed by default
   terminal = "ghostty"; # Set Default System Terminal
 
   keyboardLayout = "us";

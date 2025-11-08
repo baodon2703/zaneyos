@@ -5,9 +5,6 @@ let
     ghosttyEnable
     tmuxEnable
     waybarChoice
-    weztermEnable
-    vscodeEnable
-    helixEnable
     doomEmacsEnable
     ;
 in
@@ -51,19 +48,9 @@ in
     ./yazi
     ./zoxide.nix
     ./zsh
+    ./noctalia.nix
+    ./editors/doom-emacs.nix
   ]
-  ++ (if helixEnable then [ ./evil-helix.nix ] else [ ])
-  ++ (if vscodeEnable then [ ./vscode.nix ] else [ ])
-  ++ (
-    if doomEmacsEnable then
-      [
-        ./editors/doom-emacs-install.nix
-        ./editors/doom-emacs.nix
-      ]
-    else
-      [ ]
-  )
-  ++ (if weztermEnable then [ ./wezterm.nix ] else [ ])
   ++ (if ghosttyEnable then [ ./ghostty.nix ] else [ ])
   ++ (if tmuxEnable then [ ./tmux.nix ] else [ ])
   ++ (if alacrittyEnable then [ ./alacritty.nix ] else [ ]);

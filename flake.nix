@@ -46,7 +46,7 @@
           inherit username;
           inherit host;
           inherit profile; # keep using the let-bound profile for modules/scripts
-          # inherit pkgs-unstable;
+          inherit system;
         };
         modules = [
           ./profiles/${gpuProfile}

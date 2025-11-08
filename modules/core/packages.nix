@@ -86,6 +86,6 @@
     obsidian
     # immich-go # Tool for bulk-upload
     libation # liberate audible
-    emacs
+    # emacs-pgtk
   ];
 }
