@@ -65,8 +65,6 @@
   # Add new images to ~/zaneyos/wallpapers
   stylixImage = ../../wallpapers/mountainscapedark.jpg;
 
-  waybarChoice = ../../modules/home/waybar/waybar-curved.nix;
-
   # Set Animation style
   # Available options are:
   # animations-def.nix  (default)

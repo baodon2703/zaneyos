@@ -4,7 +4,6 @@ let
     alacrittyEnable
     ghosttyEnable
     tmuxEnable
-    waybarChoice
     doomEmacsEnable
     ;
 in
@@ -40,13 +39,12 @@ in
     ./swaync.nix
     ./tealdeer.nix
     ./virtmanager.nix
-    waybarChoice
     ./wlogout
     ./xdg.nix
     ./yazi
     ./zoxide.nix
     ./zsh
-    ./noctalia.nix
+    #./noctalia.nix
     ./editors/doom-emacs.nix
   ]
   ++ (if ghosttyEnable then [ ./ghostty.nix ] else [ ])

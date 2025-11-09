@@ -12,6 +12,10 @@ let
     ;
 in
 {
+  imports = [
+    # ../waybar/waybar-curved.nix
+    ./animations-dynamic.nix
+  ];
   home.packages = with pkgs; [
     swww
     grim

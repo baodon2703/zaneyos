@@ -73,9 +73,7 @@
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
     usbutils # Good Tools For USB Devices
-    uwsm # Universal Wayland Session Manager (optional must be enabled)
     waypaper  # wallpaper changer
-    warp-terminal # Terminal with AI support build in
     wget # Tool For Fetching Files With Links
     ytmdl # Tool For Downloading Audio From YouTube
     gcc # C compiler for neovim
@@ -86,5 +84,6 @@
     # immich-go # Tool for bulk-upload
     libation # liberate audible
     # emacs-pgtk
+    restic
   ];
 }
