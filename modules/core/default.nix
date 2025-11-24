@@ -36,5 +36,6 @@ in
     ./couchdb.nix
     ./audiobookshelf.nix
     ./immich.nix
+    ./linkwarden.nix
   ];
 }

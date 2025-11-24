@@ -30,6 +30,7 @@ in
         59011
         8080
         5984 # couchdb
+        3000 # linkwarden
       ];
       allowedUDPPorts = [
         59010

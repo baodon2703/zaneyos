@@ -85,5 +85,8 @@
     libation # liberate audible
     # emacs-pgtk
     restic
+    unstable.code-cursor
+    unstable.linkwarden
+    appimage-run
   ];
 }
