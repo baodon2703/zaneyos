@@ -37,5 +37,6 @@ in
     ./audiobookshelf.nix
     ./immich.nix
     ./linkwarden.nix
+    ./tailscale.nix
   ];
 }
