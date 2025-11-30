@@ -44,6 +44,7 @@ in
     ./yazi
     ./zoxide.nix
     ./zsh
+    ./fish.nix
     #./noctalia.nix
     ./editors/doom-emacs.nix
   ]

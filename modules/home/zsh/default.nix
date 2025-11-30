@@ -5,6 +5,25 @@
 }: {
   programs.zsh = {
     enable = true;
+    initContent = lib.mkOrder 550 ''
+      # TRAMP compatibility - must be first!
+      if [[ "$TERM" == "dumb" ]]; then
+        unsetopt zle
+        unsetopt prompt_cr
+        unsetopt prompt_subst
+        PS1='$ '
+        return
+      fi
+
+      bindkey "\eh" backward-word
+      bindkey "\ej" down-line-or-history
+      bindkey "\ek" up-line-or-history
+      bindkey "\el" forward-word
+      if [ -f $HOME/.zshrc-personal ]; then
+        source $HOME/.zshrc-personal
+      fi
+    '';
+
     autosuggestion.enable = true;
     syntaxHighlighting = {
       enable = true;
@@ -34,16 +53,6 @@
         file = "p10k.zsh";
       }
     ];
-
-    initContent = ''
-      bindkey "\eh" backward-word
-      bindkey "\ej" down-line-or-history
-      bindkey "\ek" up-line-or-history
-      bindkey "\el" forward-word
-      if [ -f $HOME/.zshrc-personal ]; then
-        source $HOME/.zshrc-personal
-      fi
-    '';
 
     shellAliases = {
       sv = "sudo nvim";
