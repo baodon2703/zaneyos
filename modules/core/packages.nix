@@ -25,6 +25,7 @@
       enable = true;
       enableSSHSupport = true;
     };
+    mosh.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -83,6 +84,7 @@
     obsidian
     # immich-go # Tool for bulk-upload
     libation # liberate audible
+    # waypipe #better x11 forwarding
     # emacs-pgtk
     restic
     unstable.code-cursor
